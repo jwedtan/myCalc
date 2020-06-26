@@ -1,0 +1,66 @@
+
+
+
+{% block head %}
+
+{#    <link rel="stylesheet" href="//assets/stylesheets/bootstrap.min.css" />#}
+{#    <link rel="stylesheet" href="//assets/stylesheets/bootstrap-responsive.min.css" />#}
+{#    <link rel="stylesheet" href="//assets/stylesheets/application.css" />#}
+{##}
+{#    <script src="//assets/javascripts/jquery-1.9.1.js"></script>#}
+{#    <script src="//assets/javascripts/calculator.js"></script>#}
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="container text-center">
+
+    <h1>Calculator</h1>
+      <br/>
+      <br/>
+
+
+      <form action="" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+
+
+          <button type="submit" name="add">ADD</button>
+         
+
+
+      </form>
+
+      <br/>
+      <br/>
+       <h3>Result:  {{ result }}</h3>
+
+
+    <div class="hero-unit" id="calculator-wrapper">
+   <div class="row-fluid">
+   <div class="span8">
+    <div id="calculator-screen" class="uneditable-input"></div>
+     </div>
+    <div class="span1" style="text-align: center;">
+      <div class="visible-phone">
+
+      </div>
+       <div class="hidden-phone">
+
+       </div>
+    </div>
+     <div class="span3">
+        <div id="calculator-result"  class="uneditable-input"></div>
+       </div>
+       </div>
+
+     </div>
+
+   
+
+
+
+
+{% endblock %}
