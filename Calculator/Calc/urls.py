@@ -6,5 +6,5 @@ app_name= 'Calc'
 
 
 urlpatterns = [
-    url(r'^$', views.HomePage.as_view(), name='calc'),
+    url(r'^$', views.HomePage.as_view()),
 ]
