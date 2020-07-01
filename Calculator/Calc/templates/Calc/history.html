@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>History</title>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Operator1</th>
+      <th>Operator</th>
+      <th>Operator2</th>
+    </tr>
+    {% for calculation in calculations %}
+      <tr>
+        <td>{{ calculation.calc1 }}</td>
+        <td>{{ calculation.calc2 }}</td>
+        <td>{{ calculation.result }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
