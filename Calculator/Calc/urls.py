@@ -7,5 +7,5 @@ app_name= 'Calc'
 
 urlpatterns = [
     url(r'^$', views.HomePage.as_view()),
-    # url(r'^history/', views.history),
+    # url(r'^history/', views.HistoryView.as_view()),
 ]

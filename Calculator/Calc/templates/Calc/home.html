@@ -26,18 +26,22 @@
 
   <br/>
   <br/>
-   <h3>Result:  {{ result }}</h3>
-   <!-- <h3>History: {{ calculation.calc1 }}</h3> -->
-   
-   <!-- {% for calculation in calculations %} -->
-    <!-- <li>{{ calculation.calc1 }}</li> -->
-     <!-- <td>{{ calculation.calc1 }}</td>
-     <td>{{ calculation.calc2 }}</td>
-     <td>{{ calculation.result }}</td> -->
-   
- <!-- {% endfor %} -->
 
   
+
+
+   <h3>Result:  {{ result }}</h3>
+   <h3>History: </h3>
+  <table>
+   {% for history in Calculations %}
+   <tr>
+     <td>{{ history.calc1 }}</td>
+     <td>{{ history.calc2 }}</td>
+     <td>{{ history.result}}</td>
+    
+   </tr>
+ {% endfor %}
+</table>
   </body>
   
 </html>

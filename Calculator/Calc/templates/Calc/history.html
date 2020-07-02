@@ -12,11 +12,11 @@
       <th>Operator</th>
       <th>Operator2</th>
     </tr>
-    {% for calculation in calculations %}
+    {% for history in Calculations %}
       <tr>
-        <td>{{ calculation.calc1 }}</td>
-        <td>{{ calculation.calc2 }}</td>
-        <td>{{ calculation.result }}</td>
+        <td>{{ history.calc1 }}</td>
+        <td>{{ history.calc2 }}</td>
+        <td>{{ history.result }}</td>
       </tr>
     {% endfor %}
   </table>
