@@ -31,15 +31,16 @@ class HomePage(TemplateView):
             cal = Calculations(calc1=text, calc2=text2, result=answer)
             cal.save()
             form = HomeForm()
-        self.history_list(request)
-        return render(request, self.template_name, {'form': form,'result': answer} )
+        history= self.history_list(request)
+        return render(request, self.template_name, {'form': form,'result': answer , 'hist':history})
     
     def history_list(self,request):
         context_object_name = 'history'
         # form = HomeForm()
         history = Calculations.objects.all()
-        print history
-        return render(request, self.template_name , {'history':history})
+        print type (history)
+        print type (Calculations.objects)
+        return history
    
 
 
